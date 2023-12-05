@@ -113,7 +113,7 @@ if __name__ == "__main__":
         if choice == '1':
             title = input("请输入电影标题: ")
             director = input("请输入导演: ")
-            actors = input("请输入演员(以逗号分隔）: ").split(',')
+            actors = input("请输入演员(以英文逗号分隔）: ").split(',')
             genre = input("请输入电影类型: ")
             release_date = input("请输入上映日期: ")
 
@@ -149,11 +149,10 @@ if __name__ == "__main__":
             }
 
             movie_system.modify_movie(title_to_modify, new_info)
-            print("电影修改成功！")
             input("按任意键继续...")  # 等待用户按下任意键
 
         elif choice == '4':
-            search_key = input("请输入查询关键字 (例如，标题、导演、演员、类型): ")
+            search_key = input("请输入查询关键字 (例如，标题、导演、演员、类型、上映日期): ")
             if search_key not in VALID_SEARCH_KEYS:
                 print("无效的查询关键字。请使用有效的关键字，如标题、导演、演员、类型、上映日期。")
             else:
